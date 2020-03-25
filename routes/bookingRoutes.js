@@ -6,9 +6,9 @@ const {
   createBooking,
   updateBooking,
   deleteBooking
-} = require('./../controllers/bookingController');
+} = require('../controllers/bookingController');
 
-const { protect, restrictTo } = require('./../controllers/authController');
+const { protect, restrictTo } = require('../controllers/authController');
 
 const router = express.Router();
 

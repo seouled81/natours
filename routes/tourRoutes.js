@@ -12,9 +12,9 @@ const {
   getMonthlyPlan,
   getToursWithin,
   getDistances
-} = require('./../controllers/tourController');
+} = require('../controllers/tourController');
 
-const { protect, restrictTo } = require('./../controllers/authController');
+const { protect, restrictTo } = require('../controllers/authController');
 
 const reviewRouter = require('./reviewRoutes');
 

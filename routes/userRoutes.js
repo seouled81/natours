@@ -11,7 +11,7 @@ const {
   deleteUser,
   uploadUserPhoto,
   resizeUserPhoto
-} = require('./../controllers/userController');
+} = require('../controllers/userController');
 const {
   signup,
   login,
@@ -20,7 +20,7 @@ const {
   resetPassword,
   protect,
   updatePassword
-} = require('./../controllers/authController');
+} = require('../controllers/authController');
 
 const router = express.Router();
 
