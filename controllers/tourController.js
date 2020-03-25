@@ -3,7 +3,7 @@ const sharp = require('sharp');
 const Tour = require('../models/tourModel');
 const catchAsync = require('./../utils/catchAsync');
 const factory = require('./handlerFactory');
-const appError = require('./../utils/appError');
+const AppError = require('../utils/AppError');
 
 const storage = multer.memoryStorage();
 
@@ -141,7 +141,7 @@ exports.getToursWithin = catchAsync(async (req, res, next) => {
   const radius = unit === 'mi' ? distance / 3963.2 : distance / 6378.1;
   if (!lat || !lng) {
     next(
-      new appError('Latitude and/or longitude are not in correct format', 400)
+      new AppError('Latitude and/or longitude are not in correct format', 400)
     );
   }
 
@@ -166,7 +166,7 @@ exports.getDistances = catchAsync(async (req, res, next) => {
 
   if (!lat || !lng) {
     next(
-      new appError('Latitude and/or longitude are not in correct format', 400)
+      new AppError('Latitude and/or longitude are not in correct format', 400)
     );
   }
 
