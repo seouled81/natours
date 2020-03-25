@@ -12,6 +12,7 @@ const app = require('./app');
 mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false
   })
