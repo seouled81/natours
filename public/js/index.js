@@ -7,6 +7,8 @@ import updateSettings from './updateSettings';
 import previewImage from './previewImage';
 import bookTour from './stripe';
 
+import { showAlert } from './alerts';
+
 // DOM ELEMENTS
 const mapBox = document.getElementById('map');
 const loginForm = document.querySelector('.form--login');
@@ -96,3 +98,7 @@ if (bookBtn) {
     await bookTour(tourId);
   });
 }
+
+const alertMessage = document.querySelector('body').dataset.alert;
+
+if (alertMessage) showAlert('success', alertMessage, 7);
